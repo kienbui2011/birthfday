@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Birthday</title>
+  <link href="style.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+  <h4>Happy Birthday</h4>
+  <div id="letter-container">
+    <div id="letter-content">
+      <p>Hìn iuuu!</p>
+      <p>
+        Chúc pé iu sinh nhật vui vẻ tuổi mới đạt được những gì mình mong muốn trong tuổi mới và
+        luôn luôn đặt nụ cười tươi trên khuôn mặt xinh sắn lên khuôn mặt mỗi ngày nhe <=3 </p>
+          <i>Đồng hành cùng anh nhé!!!</i>
+          <b>Kin dzzzzz</b>
+    </div>
+    <button id="open-button" onclick="openLetter()">Mở thư</button>
+  </div>
+
+  <script>
+    function openLetter() {
+      var letterContent = document.getElementById('letter-content');
+      letterContent.style.opacity = 1;
+      document.getElementById('open-button').style.display = 'none';
+      var letterContent = document.getElementById('letter-container');
+      letterContent.style.opacity = 1;
+      document.getElementById('open-button').style.display = 'none';
+    }
+  </script>
+  <canvas id="birthday"></canvas>
+  <script type="text/javascript" src="script.js"> </script>
+</body>
+
+</html>
