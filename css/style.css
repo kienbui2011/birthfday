@@ -15,10 +15,11 @@ h1 {
     transform: translate(-50%, -50%);
     color: #fff;
     font-family: "Source Sans Pro";
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 900;
     -webkit-user-select: none;
     user-select: none;
+    white-space: nowrap;
 }
 
 #letter-container {
