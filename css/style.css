@@ -20,7 +20,23 @@ h1 {
     -webkit-user-select: none;
     user-select: none;
     white-space: nowrap;
+    background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text; /* Clipping văn bản vào gradient */
+    -webkit-text-fill-color: transparent; /* Điều chỉnh màu của văn bản thành trong suốt */
+    animation: h1 2s ease infinite;
 }
+@keyframes h1 {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 #letter-container {
     position: absolute;
