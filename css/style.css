@@ -38,6 +38,20 @@ a{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng */
     margin-left: 40%;
     font-weight: bold;
+    text-decoration: none; /* Loại bỏ gạch chân */
+}
+.jumping-link {
+    display: inline-block;
+    animation: jump 0.1s infinite alternate;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
 }
 
 @keyframes h1 {
