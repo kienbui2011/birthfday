@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transition Example</title>
-    <style>
-        #letter-content {
-            opacity: 1;
-            transition: transform 1s ease-in-out;
-            color: black;
+    <title>Spin and Redirect</title>
+    <script>
+        // Định nghĩa hàm khi nút "Quay" được nhấn
+        function spinAndRedirect() {
+            // Thực hiện hành động quay (ở đây bạn có thể thêm mã để thực hiện hành động quay)
+            
+            // Sau khi quay, chờ 2 giây trước khi chuyển sang trang khác
+            setTimeout(function() {
+                // Chuyển hướng đến trang khác
+                window.location.href = 'https://example.com'; // Thay thế URL bằng URL của trang bạn muốn chuyển hướng đến
+            }, 2000); // 2000 milliseconds = 2 giây
         }
-    </style>
+    </script>
 </head>
 <body>
-    <div id="letter-content">Content</div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var letterContent = document.getElementById("letter-content");
-            letterContent.classList.add("animate");
-        });
-    </script>
+    <!-- Nút "Quay" -->
+    <button id="spin" onclick="spinAndRedirect()">Quay</button>
 </body>
 </html>

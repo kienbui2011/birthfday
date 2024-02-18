@@ -28,6 +28,17 @@ h1 {
     /* Điều chỉnh màu của văn bản thành trong suốt */
     animation: h1 2s ease infinite;
 }
+a{
+    text-align: center;
+    color: #ff4444;
+    background-color: #fbea88; /* Màu nền */
+    padding: 10px 10px; /* Khoảng cách lề bên trong */
+    border-radius: 10px; /* Độ cong của góc */
+    display: inline-block; /* Hiển thị thành hộp chữ (block) */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    margin-left: 40%;
+    font-weight: bold;
+}
 
 @keyframes h1 {
     0% {
