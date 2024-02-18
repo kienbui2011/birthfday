@@ -14,7 +14,7 @@
         body {
             margin: 0px;
             padding: 0px;
-            background-color:white;
+            background-color: white;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -96,16 +96,21 @@
             position: absolute;
             top: 10%;
             left: 45%;
-            width: 40px; /* Điều chỉnh kích thước của hình ảnh */
-            height: auto; /* Giữ tỉ lệ khung hình */
-            transition: transform 0.5s ease-in-out; /* Thêm hiệu ứng chuyển đổi */
+            width: 40px;
+            /* Điều chỉnh kích thước của hình ảnh */
+            height: auto;
+            /* Giữ tỉ lệ khung hình */
+            transition: transform 0.5s ease-in-out;
+            /* Thêm hiệu ứng chuyển đổi */
             transform: rotate(90deg);
         }
 
         .rotate-right img {
-            transform: rotate(45deg); /* Xoay hình ảnh mũi tên sang phải */
-        
-        } 
+            transform: rotate(45deg);
+            /* Xoay hình ảnh mũi tên sang phải */
+
+        }
+
         #spin {
             position: absolute;
             top: 50%;
@@ -130,9 +135,9 @@
 </head>
 
 <body>
-    
+
     <button id="spin">Quay</button>
- 
+
     <div class="wapper">
         <div class="one">Cái nịt</div>
         <div class="two">Nụ hôn</div>
@@ -145,23 +150,23 @@
 
     </div>
     <span class="arrow"><img src="muiten.jpeg" alt="Arrow"></span>
-        <script>
-            function spinAndRedirect() {
-                let container = document.querySelector(".wapper");
-                let number = Math.ceil(Math.random() * 10000);
-                container.style.transform = "rotate(" + number + "deg)";
-                number += Math.ceil(Math.random() * 10000);
-                
-                // After spinning, wait 2 seconds before redirecting
-                setTimeout(function() {
-                    window.location.href = 'gift.html';
-                }, 3000);
-            }
-            let btn = document.getElementById("spin");
-            btn.onclick = spinAndRedirect;
-        </script>
-        
-       
+    <script>
+        function spinAndRedirect() {
+            let container = document.querySelector(".wapper");
+            let number = Math.ceil(Math.random() * 10000);
+            container.style.transform = "rotate(" + number + "deg)";
+            number += Math.ceil(Math.random() * 10000);
+
+            // After spinning, wait 2 seconds before redirecting
+            setTimeout(function () {
+                window.location.href = 'gift.html';
+            }, 3000);
+        }
+        let btn = document.getElementById("spin");
+        btn.onclick = spinAndRedirect;
+    </script>
+
+
     </script>
 </body>
 
