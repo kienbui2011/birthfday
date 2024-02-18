@@ -94,11 +94,12 @@
 
         .arrow img {
             position: absolute;
-            top: 50%;
-            left: 24%;
+            top: 78%;
+            left: 50%;
             width: 40px; /* Điều chỉnh kích thước của hình ảnh */
             height: auto; /* Giữ tỉ lệ khung hình */
             transition: transform 0.5s ease-in-out; /* Thêm hiệu ứng chuyển đổi */
+            transform: rotate(-90deg);
         }
 
         .rotate-right img {
@@ -131,7 +132,7 @@
 <body>
     
     <button id="spin">Quay</button>
-   <span class="arrow"><img src="muiten.jpeg" alt="Arrow"></span>
+ 
     <div class="wapper">
         <div class="one">Cái nịt</div>
         <div class="two">Nụ hôn</div>
@@ -143,6 +144,7 @@
         <div class="eight">Bông hoa</div>
 
     </div>
+    <span class="arrow"><img src="muiten.jpeg" alt="Arrow"></span>
         <script>
             function spinAndRedirect() {
                 let container = document.querySelector(".wapper");
