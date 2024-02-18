@@ -22,21 +22,26 @@ h1 {
     white-space: nowrap;
     background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff);
     background-size: 200% 200%;
-    -webkit-background-clip: text; /* Clipping văn bản vào gradient */
-    -webkit-text-fill-color: transparent; /* Điều chỉnh màu của văn bản thành trong suốt */
+    -webkit-background-clip: text;
+    /* Clipping văn bản vào gradient */
+    -webkit-text-fill-color: transparent;
+    /* Điều chỉnh màu của văn bản thành trong suốt */
     animation: h1 2s ease infinite;
 }
+
 @keyframes h1 {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
+
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
+
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
+}
 
 #letter-container {
     position: absolute;
@@ -51,7 +56,7 @@ h1 {
     overflow: hidden;
 }
 
-#letter-container2{
+#letter-container2 {
     margin-top: 99px;
     content: "";
     position: absolute;
@@ -60,21 +65,48 @@ h1 {
     width: 0;
     height: 0;
     border-left: 250px solid transparent;
-    border-right:250px solid transparent;
+    border-right: 250px solid transparent;
     border-top: 80px solid #ffacac;
-    transition: opacity 1s ease-in-out; 
+    transition: opacity 1s ease-in-out;
 
 }
 
 #letter-content {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 9s ease-in-out;
 }
+
 
 p {
     font-size: 11px;
     font-family: sans-serif;
     color: rgb(87, 87, 87);
+    /* letter-spacing: 7px; */
+    /* white-space: nowrap; */
+    border-right: 1px solid orange;
+    /* overflow: hidden; */
+    animation: typing 1.5s steps(17) 1, caret 0.5s steps(2) infinite;
+    /* Bổ sung các khoảng trống và sửa lỗi cú pháp */
+}
+
+@keyframes caret {
+    from {
+        border-color: transparent;
+    }
+
+    to {
+        border-color: orange;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 i {
@@ -100,10 +132,12 @@ b {
     background-color: #3498db;
     color: #fff;
     cursor: pointer;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
+
 .heart-icon {
     width: 60px;
     height: 60px;
-    fill: rgb(255, 88, 88); /* Màu sắc của trái tim */
-  }
+    fill: rgb(255, 88, 88);
+    /* Màu sắc của trái tim */
+}
