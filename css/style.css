@@ -57,7 +57,7 @@ h1 {
 }
 
 #letter-container2 {
-    margin-top: 99px;
+    margin-top: 100px;
     content: "";
     position: absolute;
     left: 50%;
@@ -124,7 +124,7 @@ b {
 }
 
 #open-button {
-    position: absolute;
+   position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -133,8 +133,7 @@ b {
     color: #fff;
     cursor: pointer;
     border-radius: 10px;
-    position: relative; /* Để sử dụng z-index, phần tử cần có position khác 'static' */
-    z-index: 1; /* Thiết lập z-index ban đầu */
+    
 }
 
 .heart-icon {
