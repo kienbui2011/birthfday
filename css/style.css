@@ -64,8 +64,8 @@ h1 {
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 250px solid transparent;
-    border-right: 250px solid transparent;
+    border-left: 240px solid transparent;
+    border-right: 240px solid transparent;
     border-top: 80px solid #ffacac;
     transition: opacity 1s ease-in-out;
 
