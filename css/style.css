@@ -68,7 +68,7 @@ h1 {
     border-right: 240px solid transparent;
     border-top: 80px solid #ffacac;
     transition: opacity 1s ease-in-out;
-
+  
 }
 
 #letter-content {
@@ -133,6 +133,8 @@ b {
     color: #fff;
     cursor: pointer;
     border-radius: 10px;
+    position: relative; /* Để sử dụng z-index, phần tử cần có position khác 'static' */
+    z-index: 1; /* Thiết lập z-index ban đầu */
 }
 
 .heart-icon {
