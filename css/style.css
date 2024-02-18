@@ -128,7 +128,7 @@ b {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 15px;
+    padding: 5px 5px;
     background-color: #3498db;
     color: #fff;
     cursor: pointer;
