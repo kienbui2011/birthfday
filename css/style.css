@@ -36,7 +36,7 @@ a{
     border-radius: 10px; /* Độ cong của góc */
     display: inline-block; /* Hiển thị thành hộp chữ (block) */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng */
-    margin-left: 30%;
+    margin-left: 25%;
     font-weight: bold;
     text-decoration: none; /* Loại bỏ gạch chân */
 }
