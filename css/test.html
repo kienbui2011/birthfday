@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
+
 <head>
-    <title>Spin and Redirect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật</title>
+</head>
+
+<body>
+    <audio id="myAudio" controls autoplay>
+        <source src="hp.mp3" type="audio/mpeg">
+    </audio>
+
+    <h1>Chúc Mừng Sinh Nhật</h1>
+    <div id="letter-container">
+        <div id="letter-content">
+            <br>
+            <i>Hìn iuuu!</i>
+            <p>Chúc pé iu sinh nhật vui vẻ tuổi mới đạt được những gì mình mong muốn trong tuổi mới
+                <br> và luôn luôn đặt nụ cười tươi trên khuôn mặt xinh sắn lên khuôn mặt mỗi ngày nhe <=3 </p>
+            <i>Đồng hành cùng anh nhé!!!</i>
+            <b>Kin dzzzzz</b>
+            <br> <br>
+            <a href="giftt.html" class="jumping-link">Mở quà nhanh không đổi ý</a>
+        </div>
+    </div>
+    <button id="open-button" onclick="openLetter()">Khi mở thư thì nhạc phát</button>
+
     <script>
-        // Định nghĩa hàm khi nút "Quay" được nhấn
-        function spinAndRedirect() {
-            // Thực hiện hành động quay (ở đây bạn có thể thêm mã để thực hiện hành động quay)
-            
-            // Sau khi quay, chờ 2 giây trước khi chuyển sang trang khác
-            setTimeout(function() {
-                // Chuyển hướng đến trang khác
-                window.location.href = 'https://example.com'; // Thay thế URL bằng URL của trang bạn muốn chuyển hướng đến
-            }, 2000); // 2000 milliseconds = 2 giây
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+            localStorage.setItem("isAudioPlaying", "true");
+        }
+
+        function openLetter() {
+            playAudio();
         }
     </script>
-</head>
-<body>
-    <!-- Nút "Quay" -->
-    <button id="spin" onclick="spinAndRedirect()">Quay</button>
 </body>
+
 </html>

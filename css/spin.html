@@ -135,7 +135,23 @@
 </head>
 
 <body>
+    <audio id="myAudio" controls autoplay style="display: none;">
+        <source src="sound/xo so.mp3" type="audio/mpeg">
+    </audio>
 
+    <script>
+        function checkAndPlayAudio() {
+            var isAudioPlaying = localStorage.getItem("isAudioPlaying");
+            if (isAudioPlaying === "true") {
+                var audio = document.getElementById("myAudio");
+                audio.play();
+            }
+        }
+
+        window.onload = function () {
+            checkAndPlayAudio();
+        };
+    </script>
     <button id="spin">Spin</button>
 
     <div class="wapper">
@@ -166,8 +182,6 @@
         btn.onclick = spinAndRedirect;
     </script>
 
-
-    </script>
 </body>
 
 </html>

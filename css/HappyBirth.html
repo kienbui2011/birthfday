@@ -8,9 +8,11 @@
 </head>
 
 <body>
+  <audio id="myAudio" controls autoplay>
+    <source src="sound/hp.mp3" type="audio/mpeg">
+</audio>
   <h1>Happy Birthday</h1>
   <div id="letter-container">
-
     <div id="letter-content">
       <br>
       <i>Hìn iuuu!</i>
@@ -20,7 +22,7 @@
           <i>Đồng hành cùng anh nhé!!!</i>
           <b>Kin dzzzzz</b>
           <br> <br>
-          <a href="index.html" class="jumping-link">Mở quà nhanh không đổi ý
+          <a href="spin.html" class="jumping-link">Mở quà nhanh không đổi ý
 
           </a>
     </div>
@@ -31,7 +33,6 @@
       </svg>
       <br>Mở tâm thư ^^</button>
   </div>
-
   <script>
     function openLetter() {
       var letterContent = document.getElementById('letter-content');
@@ -44,7 +45,19 @@
       var letterContent = document.getElementById('letter-container2');
       letterContent.style.opacity = 0;
       document.getElementById('open-button').style.display = 'none';
+      var audio = document.getElementById('myAudio');
+        audio.play();
+
     }
+
+// Function to check if audio was playing and resume playing
+function checkAndPlayAudio() {
+    var isAudioPlaying = localStorage.getItem("isAudioPlaying");
+    if (isAudioPlaying === "true") {
+        playAudio();
+    }
+}
+
   </script>
 
   <canvas id="birthday"></canvas>
