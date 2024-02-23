@@ -28,19 +28,89 @@
         .img1 {
             width: 200px;
         }
+        button {
+    position:absolute;
+    top: 50%;
+    left: 35%;
+    appearance: none;
+    background-color: #ffa2a2;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ff5656 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    animation: bounce 0.2s infinite alternate; /* Added animation */
+}
+
+button:hover {
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+button:active {
+    transform: scale(1.025);
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (min-width: 768px) {
+    .button {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+    }
+}
+
+    </style>
+<head>
+    <title>Button Example</title>
+    <script>
+        function displayMessage() {
+            document.getElementById("message").style.display = "block";
+            var audio = document.getElementById('myAudio');
+            audio.play();
+            document.getElementById("receiveButton").style.display = "none"; // Hide the button
+        }
+    </script>
+    <style>
+        #message {
+            display: none;
+        }
     </style>
 </head>
-
 <body>
     <audio id="myAudio" controls autoplay style="display: none;">
         <source src="sound/tada.mp3" type="audio/mpeg">
     </audio>
-
-    <img class="img2" src="img/hienchua.png">
-    <h1>Chúc mừng em đã trúng :</h1>
-    <br>
-    <h2>Cái nịt</h2>
-    <img class="img1 img2" src="img/cainit.webp">
+    <button id="receiveButton" onclick="displayMessage()">Nhận quà</button>
+    <div id="message"> 
+        <img class="img2" src="img/hienchua.png">
+        <h1>Chúc mừng em đã trúng :</h1>
+        <br>
+        <h2>Cái nịt</h2>
+        <img class="img1 img2" src="img/cainit.webp">
+    </div>
 </body>
-
 </html>
