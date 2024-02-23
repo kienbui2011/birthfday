@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spin</title>
 
     <style>
         * {
@@ -23,8 +24,8 @@
         }
 
         .wapper {
-            width: 500px;
-            height: 500px;
+            width: 300px;
+            height: 300px;
             background-color: #ccc;
             border-radius: 50%;
             border: 2px solid #dde;
@@ -34,21 +35,21 @@
         }
 
         .wapper div {
-            height: 50%;
-            width: 180px;
+            height: 51%;
+            width: 120px;
             position: absolute;
-            clip-path: polygon(100% 0, 50% 100%, 0 0);
+            clip-path: polygon(104% 0, 50% 100%, 0 0);
             transform: translateX(-50%);
             transform-origin: bottom;
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 11px;
             font-weight: bold;
             font-family: sans-serif;
             color: #fff;
-            left: 135px;
+            left: 90px;
         }
 
         .wapper .one {
@@ -94,26 +95,21 @@
 
         .arrow img {
             position: absolute;
-            top: 10%;
-            left: 45%;
-            width: 40px;
-            /* Điều chỉnh kích thước của hình ảnh */
+            top: 27%;
+            left: 46%;
+            width: 30px;
             height: auto;
-            /* Giữ tỉ lệ khung hình */
             transition: transform 0.5s ease-in-out;
-            /* Thêm hiệu ứng chuyển đổi */
             transform: rotate(90deg);
         }
 
         .rotate-right img {
             transform: rotate(45deg);
-            /* Xoay hình ảnh mũi tên sang phải */
-
         }
 
         #spin {
             position: absolute;
-            top: 50%;
+            top: 75%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 99;
@@ -121,12 +117,12 @@
             text-transform: uppercase;
             border: solid 8px #fff;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 16px;
             color: #a2a2a2;
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 40px;
             font-family: sans-serif;
-            border-radius: 50%;
+            border-radius: 20px;
             cursor: pointer;
             outline: none;
             letter-spacing: 1px;
@@ -135,32 +131,55 @@
         h2 {
             position: absolute;
             top: 80%;
-            left: auto;
+            left: 50%;
+            transform: translateX(-50%);
             transition: transform 0.5s ease-in-out;
             background-color: rgb(255, 121, 121);
+            font-size: 11px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        @media only screen and (min-width: 600px) {
+            body {
+                justify-content: flex-start;
+                padding: 20px;
+            }
+            .wapper {
+                width: 500px;
+                height: 500px;
+            }
+            .wapper div {
+                font-size: 20px;
+                width: 180px;
+                left: 135px;
+            }
+            .arrow img {
+                width: 40px;
+                top: 10%;
+                left: 45%;
+            }
+            #spin {
+                top: 80%;
+                font-size: 20px;
+                width: 120px;
+                height: 50px;
+                border-radius: 25px;
+            }
+            h2 {
+                top: 90%;
+                font-size: 16px;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <audio id="myAudio"style="display: none;">
+    <audio id="myAudio" style="display: none;">
         <source src="sound/xo so.mp3" type="audio/mpeg">
     </audio>
-    
-<!-- 
-    <script>
-        function checkAndPlayAudio() {
-            var isAudioPlaying = localStorage.getItem("isAudioPlaying");
-            if (isAudioPlaying === "true") {
-                var audio = document.getElementById("myAudio");
-                audio.play();
-            }
-        }
-
-        window.onload = function () {
-            checkAndPlayAudio();
-        };
-    </script> -->
     <button id="spin">Spin</button>
 
     <div class="wapper">
@@ -172,7 +191,6 @@
         <div class="six">200k</div>
         <div class="seven">Sét áo</div>
         <div class="eight">Bông hoa</div>
-
     </div>
     <span class="arrow"><img src="img/muiten.jpeg" alt="Arrow"></span>
     <script>

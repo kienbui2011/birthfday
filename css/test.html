@@ -1,43 +1,218 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chúc Mừng Sinh Nhật</title>
+    <title>Mobile-friendly Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .wapper {
+            width: 300px;
+            height: 300px;
+            background-color: #ccc;
+            border-radius: 50%;
+            border: 2px solid #dde;
+            position: relative;
+            overflow: hidden;
+            transition: 5s;
+        }
+
+        .wapper div {
+            height: 50%;
+            width: 120px;
+            position: absolute;
+            clip-path: polygon(100% 0, 50% 100%, 0 0);
+            transform: translateX(-50%);
+            transform-origin: bottom;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: sans-serif;
+            color: #fff;
+            left: 90px;
+        }
+
+        .wapper .one {
+            background-color: #3f51b5;
+            left: 50%;
+        }
+
+        .wapper .two {
+            background-color: #3f5;
+            transform: rotate(45deg);
+        }
+
+        .wapper .three {
+            background-color: beige;
+            transform: rotate(90deg);
+            color: gray;
+        }
+
+        .wapper .four {
+            background-color: rosybrown;
+            transform: rotate(135deg);
+        }
+
+        .wapper .five {
+            background-color: rebeccapurple;
+            transform: rotate(180deg);
+        }
+
+        .wapper .six {
+            background-color: blue;
+            transform: rotate(225deg);
+        }
+
+        .wapper .seven {
+            background-color: red;
+            transform: rotate(270deg);
+        }
+
+        .wapper .eight {
+            background-color: orange;
+            transform: rotate(315deg);
+        }
+
+        .arrow img {
+            position: absolute;
+            top: 5%;
+            left: 40%;
+            width: 30px;
+            height: auto;
+            transition: transform 0.5s ease-in-out;
+            transform: rotate(90deg);
+        }
+
+        .rotate-right img {
+            transform: rotate(45deg);
+        }
+
+        #spin {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            background-color: #e2e2e2;
+            text-transform: uppercase;
+            border: solid 8px #fff;
+            font-weight: bold;
+            font-size: 16px;
+            color: #a2a2a2;
+            width: 100px;
+            height: 40px;
+            font-family: sans-serif;
+            border-radius: 20px;
+            cursor: pointer;
+            outline: none;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: transform 0.5s ease-in-out;
+            background-color: rgb(255, 121, 121);
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        @media only screen and (min-width: 600px) {
+            body {
+                justify-content: flex-start;
+                padding: 20px;
+            }
+            .wapper {
+                width: 500px;
+                height: 500px;
+            }
+            .wapper div {
+                font-size: 20px;
+                width: 180px;
+                left: 135px;
+            }
+            .arrow img {
+                width: 40px;
+                top: 10%;
+                left: 45%;
+            }
+            #spin {
+                top: 80%;
+                font-size: 20px;
+                width: 120px;
+                height: 50px;
+                border-radius: 25px;
+            }
+            h2 {
+                top: 90%;
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <audio id="myAudio" controls autoplay>
-        <source src="hp.mp3" type="audio/mpeg">
+    <audio id="myAudio" style="display: none;">
+        <source src="sound/xo so.mp3" type="audio/mpeg">
     </audio>
+    <button id="spin">Spin</button>
 
-    <h1>Chúc Mừng Sinh Nhật</h1>
-    <div id="letter-container">
-        <div id="letter-content">
-            <br>
-            <i>Hìn iuuu!</i>
-            <p>Chúc pé iu sinh nhật vui vẻ tuổi mới đạt được những gì mình mong muốn trong tuổi mới
-                <br> và luôn luôn đặt nụ cười tươi trên khuôn mặt xinh sắn lên khuôn mặt mỗi ngày nhe <=3 </p>
-            <i>Đồng hành cùng anh nhé!!!</i>
-            <b>Kin dzzzzz</b>
-            <br> <br>
-            <a href="giftt.html" class="jumping-link">Mở quà nhanh không đổi ý</a>
-        </div>
+    <div class="wapper">
+        <div class="one">Cái nịt</div>
+        <div class="two">Nụ hôn</div>
+        <div class="three">Chuối</div>
+        <div class="four">1 củ</div>
+        <div class="five">500k</div>
+        <div class="six">200k</div>
+        <div class="seven">Sét áo</div>
+        <div class="eight">Bông hoa</div>
     </div>
-    <button id="open-button" onclick="openLetter()">Khi mở thư thì nhạc phát</button>
-
+    <span class="arrow"><img src="img/muiten.jpeg" alt="Arrow"></span>
     <script>
-        function playAudio() {
-            var audio = document.getElementById("myAudio");
-            audio.play();
-            localStorage.setItem("isAudioPlaying", "true");
-        }
+        function spinAndRedirect() {
+            let container = document.querySelector(".wapper");
+            let number = Math.ceil(Math.random() * 10000);
+            container.style.transform = "rotate(" + number + "deg)";
+            number += Math.ceil(Math.random() * 10000);
 
-        function openLetter() {
-            playAudio();
+            // After spinning, wait 2 seconds before redirecting
+            setTimeout(function () {
+                window.location.href = 'gift.html';
+            }, 4000);
+            var audio = document.getElementById('myAudio');
+            audio.play();
         }
+        let btn = document.getElementById("spin");
+        btn.onclick = spinAndRedirect;
     </script>
+
+    <h2>!!! Chỉ được quay 1 lần duy nhất !!!</h2>
+
 </body>
 
 </html>
