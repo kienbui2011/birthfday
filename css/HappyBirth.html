@@ -10,7 +10,7 @@
 <body>
   <audio id="myAudio" controls autoplay style="display: none;">
     <source src="sound/hp.mp3" type="audio/mpeg">
-</audio>
+  </audio>
   <h1>Happy Birthday</h1>
   <div id="letter-container">
     <div id="letter-content">
@@ -19,7 +19,8 @@
       <p>
         Chúc pé iu sinh nhật vui vẻ tuổi mới đạt được những gì mình mong muốn trong tuổi mới
         <br> và luôn luôn đặt nụ cười tươi trên khuôn mặt xinh sắn lên khuôn mặt mỗi ngày nhe <=3 </p>
-          <i>Đồng hành cùng anh nhé!!!</i>
+          <i> Đồng hành </i><br>
+          <i style="margin-left: 12px;">cùng nhau nhé!!!</i>
           <b>Kin dzzzzz</b>
           <br> <br>
           <a href="spin.html" class="jumping-link">Mở quà nhanh không đổi ý
@@ -46,17 +47,17 @@
       letterContent.style.opacity = 0;
       document.getElementById('open-button').style.display = 'none';
       var audio = document.getElementById('myAudio');
-        audio.play();
+      audio.play();
 
     }
 
-// Function to check if audio was playing and resume playing
-function checkAndPlayAudio() {
-    var isAudioPlaying = localStorage.getItem("isAudioPlaying");
-    if (isAudioPlaying === "true") {
-        playAudio();
-    }
-}
+    // // Function to check if audio was playing and resume playing
+    // function checkAndPlayAudio() {
+    //     var isAudioPlaying = localStorage.getItem("isAudioPlaying");
+    //     if (isAudioPlaying === "true") {
+    //         playAudio();
+    //     }
+    // }
 
   </script>
 

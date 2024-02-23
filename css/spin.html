@@ -131,6 +131,7 @@
             outline: none;
             letter-spacing: 1px;
         }
+
         h2 {
             position: absolute;
             top: 80%;
@@ -138,15 +139,15 @@
             transition: transform 0.5s ease-in-out;
             background-color: rgb(255, 121, 121);
         }
-        
     </style>
 </head>
 
 <body>
-    <audio id="myAudio" controls autoplay style="display: none;">
+    <audio id="myAudio"style="display: none;">
         <source src="sound/xo so.mp3" type="audio/mpeg">
     </audio>
-
+    
+<!-- 
     <script>
         function checkAndPlayAudio() {
             var isAudioPlaying = localStorage.getItem("isAudioPlaying");
@@ -159,7 +160,7 @@
         window.onload = function () {
             checkAndPlayAudio();
         };
-    </script>
+    </script> -->
     <button id="spin">Spin</button>
 
     <div class="wapper">
@@ -184,7 +185,9 @@
             // After spinning, wait 2 seconds before redirecting
             setTimeout(function () {
                 window.location.href = 'gift.html';
-            }, 3000);
+            }, 4000);
+            var audio = document.getElementById('myAudio');
+            audio.play();
         }
         let btn = document.getElementById("spin");
         btn.onclick = spinAndRedirect;
