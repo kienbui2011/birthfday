@@ -1,0 +1,28 @@
+import arcpy
+>>> from arcpy import env
+>>> env.out="VN 2000 UTM Zone 48N"
+>>> env.workspace="c:\\BuiVanKien"
+>>> arcpy.CreateFileGDB_management("c:\\BuiVanKien","CSDL_DatDai","")
+<Result 'c:\\BuiVanKien\\CSDL_DatDai.gdb'>
+>>> arcpy.CreateFeatureDataset_management("c:\\BuiVanKien\\CSDL_DatDai.gdb","DiaChinh")
+<Result 'c:\\BuiVanKien\\CSDL_DatDai.gdb\\DiaChinh'>
+>>> arcpy.CreateFeatureclass_management("c:\\BuiVanKien\\CSDL_DatDai.gdb\\DiaChinh","RanhGioiThuaDat","POLYLINE")
+<Result 'c:\\BuiVanKien\\CSDL_DatDai.gdb\\DiaChinh\\RanhGioiThuaDat'>
+>>> arcpy.CreateFeatureclass_management("c:\\BuiVanKien\\CSDL_DatDai.gdb\\DiaChinh","ThuaDat","POLYGON")
+<Result 'c:\\BuiVanKien\\CSDL_DatDai.gdb\\DiaChinh\\ThuaDat'>
+>>> arcpy.AddField_management("ThuaDat","thuaDatID","SHORT","","","","Mã đối tượng")
+
+<Result 'ThuaDat'>
+>>> arcpy.AddField_management("ThuaDat","maXa","TEXT","","",5,"Mã xã")
+<Result 'ThuaDat'>
+>>> arcpy.AddField_management("ThuaDat","soHieuToBanDo","SHORT","","","","Số hiệu tờ bản đồ")
+<Result 'ThuaDat'>
+>>> arcpy.AddField_management("ThuaDat","soThuTuThua","SHORT","","","","Số thửa đất")
+<Result 'ThuaDat'>
+>>> arcpy.AddField_management("ThuaDat","trangThaiDangKy","SHORT","","","","Trạng thái đăng ký")
+<Result 'ThuaDat'>
+>>> arcpy.AddField_management("ThuaDat","dienTich","DOUBLE","","","","Diện tích")
+<Result 'ThuaDat'>
+>>> arcpy.AddField_management("ThuaDat","loaiDat","TEXT","","",20,"Loại đất")
+<Result 'ThuaDat'>
+>>>
